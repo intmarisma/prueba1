@@ -1,0 +1,82 @@
+!/bin/bash
+
+# Verifica que se proporcione el nombre de usuario como parámetro
+if [ -z "$1" ]; then
+   echo "Por favor, proporciona el nombre de usuario de GitHub como parámetro."
+   exit 1
+fi
+
+# Nombre de usuario de GitHub
+username=$1
+
+# Token de acceso personal
+token=""
+
+# Clonar el repositorio
+git clone https://github.com/$username/clone1.gif
+
+# Agregar los archivos de ejercicios
+cd /home/pcboot/Documentos/
+cp /home/pcboot/Documentos/t1a2/*.sh .
+
+# hacer commit y push
+git add .
+git commit -m "Agregar archivos .sh de la actividad"
+git push
+
+
+
+
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Autenticación falló para 'https://github.com/intmarisma/clone1.gif/'
+warning: agregando repositorio de git embebido: clonar
+ayuda: You've added another git repository inside your current repository.
+ayuda: Clones of the outer repository will not contain the contents of
+ayuda: the embedded repository and will not know how to obtain it.
+ayuda: If you meant to add a submodule, use:
+ayuda: 
+ayuda: 	git submodule add <url> clonar
+ayuda: 
+ayuda: If you added this path by mistake, you can remove it from the
+ayuda: index with:
+ayuda: 
+ayuda: 	git rm --cached clonar
+ayuda: 
+ayuda: See "git help submodule" for more information.
+error: open("t1a3/menu.sh.save"): Permiso denegado
+error: no es posible indexar archivo 't1a3/menu.sh.save'
+fatal: falló al agregar archivos
+En la rama clonar
+
+Confirmación inicial
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que será confirmado)
+	almacen/
+	altura_mayor.sh
+	antonio/
+	calculadora.sh
+	clonar/
+	copia_scripts.sh
+	cuenta10ficheros.sh
+	decada_edad.sh
+	diadelmes.sh
+	horoscopochino.sh
+	subir_github.sh
+	sumarango.sh
+	t1a1/
+	t1a2/
+	t1a3/
+	usuarios.sh
+
+no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa "git add" para hacerles seguimiento)
+fatal: No se ha configurado un destino para el empuje.
+Puedes o especificar una URL desde la línea de comandos o configurar un repositorio remoto usando
+
+    git remote add <nombre> <url>
+
+y luego empujar al nombre del remoto
+
+    git push <nombre>
+	
